@@ -23,4 +23,4 @@ _Carl Sagan_
 
 - [ ] More to follow... 
 
-Meanwhile, check this awesome school -> [FCT_NOVA](https://www.fct.unl.pt)
+Meanwhile, check this awesome school -> [FCT-NOVA](https://www.fct.unl.pt)
