@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Using github pages to document this repository!
 # social links
 # twitter_username: your-twitter-handle
-github_username:  https://github.com/antoniomnds
+github_username: antoniomnds
 
 show_excerpts: true # set to false to remove excerpts on the homepage
 
