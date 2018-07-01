@@ -4,8 +4,8 @@ email: amn.santos@campus.fct.unl.pt
 description: > # this means to ignore newlines until "baseurl:"
   Using github pages to document this repository!
 # social links
-<delete>twitter_username: your-twitter-handle</delete>
-github_username:  your-github-handle
+# twitter_username: your-twitter-handle
+github_username:  https://github.com/antoniomnds
 
 show_excerpts: true # set to false to remove excerpts on the homepage
 
