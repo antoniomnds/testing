@@ -1,39 +1,78 @@
-<!DOCTYPE html>     
-<html lang="en">       
-    <meta charset="UTF-8">
-    <title>NOVAthesis template configuration</title>
-</head>
-<body>
-    <h1 title="The largest predefined (in size) heading in HTML!" style="color: blue">Template configuration.<br/> (a large heading with a line break)</h1> 
-    <h2 title="A not so large heading.">This is a heading 2.</h2>
-    <h3 title="A coloured heading." style="color: gold">This is a heading 3.</h3>
-    <h4 title="I have a different font." style="font-family:'Courier New', Courier, monospace">This is a heading 4.</h4>
-    <h5>This is a heading 5.</h5>
-    <h6>This is an unstyled heading 6.</h6>
-    <h6 title="Such style!" style="color:brown; font-size:30px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"> This is a styled heading 6.</h6>
-    <p title="I'm a paragraph!">There isn't a heading 7.</p>
-    <p>This is a(nother) paragraph.</p>
-    <p>Check out the
-        <a href="https://github.com/joaomlourenco/novathesis/wiki">NOVAthesis wiki!</a>
-    </p>
-    <br/>
-    <button title="Click me!"> An useless button :)</button>
-    <br/>
-    <br/>
-    <img title="A snowman in summer??!" src="snowman-bitmap.jpg" alt="An unique snowman" width="150" height="200"> 
-    <h2>Parameters:</h2>
-    <ol title="I have a title too!" >
-        <li>Language</li>
-        <li>Cover language</li>
-        <li>Aftercover inclusion</li>
-    </ol>
-    <h2>Unordered parameters:</h2>
-    <ul>
-        <li>Language</li>
-        <li>Cover language</li>
-        <li>Aftercover inclusion</li>
-    </ul>
-    </br>
-    <img title="A public domain image :)" src="construction-zone-1351759675pK2.jpg" alt="Under construction" width="350" height="200">
-</body>
+<!DOCTYPE html>
+<!--Root element--> 
+<html lang="en">
+    <head>  <!--Document metadata-->
+        <meta charset="UTF-8">
+        <!--Document title-->
+        <title>HTML eXperience</title>
+        <!--Internal CSS uses the element style in the head section-->
+        <style>
+        h1 {background-color:lightblue}
+        h2 {color:rgba(56, 165, 42, 0.7)} /* Opacity set to 70% */
+        p {color:blue}
+        </style>
+        <link rel="stylesheet" href="styles.css">   <!--External style sheet (External CSS)-->
+    </head>
+    <body id="Beginning" style="background-color:antiquewhite;"> <!--Inline CSS uses the style attribute of each HTML element-->
+        <h1 title="The largest predefined (in size) heading in HTML!" style="color: blue; text-align: center;">
+            Template configuration (a large heading with a <br/>line break)</h1> 
+        <h2 title="A not so large heading.">This is a heading 2.</h2>
+        <h3 title="A coloured heading." style="color:coral">This is a heading 3.</h3>
+        <h4 title="I have a different font." style="font-family:'Courier New', Courier, monospace">This is a heading 4.</h4>
+        <h5>This is a heading 5.</h5>
+        <h6 title="Looking for binoculars? :)">This is an unstyled heading 6.</h6>
+        <h6 title="Such style!" style="color:brown; font-size:30px; 
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+            This is a styled heading 6.
+        </h6>
+        <p title="I'm a paragraph!">There isn't a heading 7.</p>
+        <p>This is a(nother) paragraph.</p>
+        <br/>
+        <hr title="A horizontal rule.">
+        <br/>
+        <p style="font-size: 25px; text-align: center; ">Check out the
+            <a href="https://github.com/joaomlourenco/novathesis/wiki" target="_blank"><i>NOVAthesis</i> wiki!</a>
+        </p>
+        <br/>
+        <!--Button "inside" a link. The same can be done for any HTML element-->
+        <a href="https://www.fct.unl.pt" target="_blank"><button title="FCT-UNL" style="font-size: 20px"> Click me! :) </button></a> 
+        <br/>
+        <br/>
+        <img title="A snowman in summer??!" src="snowman-bitmap.jpg" alt="An unique snowman" width="150" height="200"> 
+        <h2>Parameters:</h2>
+        <ol title="I have a title too!" >
+            <li class="error">Language</li>
+            <li style="color: blue;">Cover language</li>
+            <li class="error">Aftercover inclusion</li>
+        </ol>
+        <h2><ins>Unordered</ins> parameters:</h2>
+        <ul>
+            <li>Language</li>
+            <li style="font-size: 120%;">Cover language</li>
+            <li>Aftercover <mark>inclusion</mark></li>
+        </ul>
+        <hr>
+        <br/>
+        <q>Never give up on a dream just because of the time it will take to accomplish it. The time will pass anyway.</q>
+        
+        <blockquote cite="www.google.com">Never give up on a dream just because of the time it will take to accomplish it. The time will pass anyway.</blockquote>
+        <hr>
+        <pre>
+            <p><abbr title="Faculdade de Ciências e Tecnologia da Universidade Nova de Lisboa">FCT-UNL</abbr> was founded in 1977.</p>
+            <address>Quinta da Torre<br/>Campus Universitário<br/>2829-516 Caparica</address>
+            <address>   <!-- Preformatted text does not require line breaks :) -->
+                Quinta da Torre
+                Campus Universitário
+                2829-516 Caparica</address>
+
+            <bdo dir="rtl">Hello World!</bdo>
+        </pre>
+        <!--Inline styling bellow...-->
+        <p style="background-color: green; color:white; font-size: 20px; text-align: center; border:black solid 4px;">A <em>green</em> box</p>
+        <br/>
+        <a href="#Beginning" style="font-size: 25px">Jump to the top!</a>  <!--Linked bookmark-->
+
+        <br/>
+        <img id="img2" title="A public domain image :)" src="construction-zone-1351759675pK2.jpg" alt="Under construction" width="350" height="200">
+    </body>
 </html>        

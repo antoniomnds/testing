@@ -1,0 +1,56 @@
+body {
+    background-color: powderblue;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 5px solid black;
+}
+
+/* style definition to an HTML element */
+p {
+    font-family: Verdana, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 110%;
+    border: 2px dashed green;
+    padding: 20px;
+}
+
+/* style definition of an element with a specific id */
+#img2 {
+    border: 2px solid black;
+    margin: 60px;
+}
+
+/* class attribute style definition in list entries */
+li.error {
+    color: red;
+}
+
+/* style of an unvisited link */
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+/* style of a visited link */
+a:visited {
+    color: indigo;
+    background-color: green;
+    text-decoration: none;
+}
+
+/* style of the link when moused-over */
+a:hover {
+    color: red;
+    background-color: yellow;
+    text-decoration: underline;
+}
+
+/* style of an active link */
+a:active {
+    color: yellow;
+    background-color: red;
+    text-decoration: underline;
+}
+
