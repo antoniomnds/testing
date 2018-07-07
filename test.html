@@ -7,20 +7,21 @@
         <title>HTML eXperience</title>
         <!--Internal CSS uses the element style in the head section-->
         <style>
-        h1 {background-color:lightblue}
-        h2 {color:rgba(56, 165, 42, 0.7)} /* Opacity set to 70% */
-        p {color:blue}
+            h1 {background-color:lightblue}
+            h2 {color:rgba(56, 165, 42, 0.8)} /* Opacity set to 80% */
+            p {color:blue}
         </style>
-        <link rel="stylesheet" href="styles.css">   <!--External style sheet (External CSS)-->
+        <link rel="stylesheet" href="stylesheets/styles.css">   <!--External style sheet (External CSS). Remove to see the magic disappear-->
     </head>
-    <body id="Beginning" style="background-color:antiquewhite;"> <!--Inline CSS uses the style attribute of each HTML element-->
+    <body id="beginning"> <!--Inline CSS uses the style attribute of each HTML element-->
         <h1 title="The largest predefined (in size) heading in HTML!" style="color: blue; text-align: center;">
             Template configuration (a large heading with a <br/>line break)</h1> 
-        <h2 title="A not so large heading.">This is a heading 2.</h2>
+        <h2>Welcome to a mixed salad of HTML elements with some Cascading Style Sheets!</h2>
+        <h2 title="A not so large heading.">Btw, this is a heading 2.</h2>
         <h3 title="A coloured heading." style="color:coral">This is a heading 3.</h3>
         <h4 title="I have a different font." style="font-family:'Courier New', Courier, monospace">This is a heading 4.</h4>
         <h5>This is a heading 5.</h5>
-        <h6 title="Looking for binoculars? :)">This is an unstyled heading 6.</h6>
+        <h6 title="Looking for binoculars? :)">This is a heading 6.</h6>
         <h6 title="Such style!" style="color:brown; font-size:30px; 
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
             This is a styled heading 6.
@@ -35,26 +36,125 @@
         </p>
         <br/>
         <!--Button "inside" a link. The same can be done for any HTML element-->
-        <a href="https://www.fct.unl.pt" target="_blank"><button title="FCT-UNL" style="font-size: 20px"> Click me! :) </button></a> 
+        <a href="https://www.fct.unl.pt" target="_blank">
+            <button title="FCT-UNL"> Click me! :) </button>
+        </a> 
         <br/>
         <br/>
-        <img title="A snowman in summer??!" src="snowman-bitmap.jpg" alt="An unique snowman" width="150" height="200"> 
-        <h2>Parameters:</h2>
-        <ol title="I have a title too!" >
+        <a href="https://github.com/joaomlourenco/novathesis/" target="_blank">
+            <img title="A snowman in summer??!" src="images/snowman-bitmap.jpg" alt="An unique snowman" style="float:right;width:150px;height:200px;border:0">
+        </a>
+        <h2><mark>Ordered</mark> parameters:</h2>
+        <ol title="I have a title too!" type="I">
             <li class="error">Language</li>
-            <li style="color: blue;">Cover language</li>
+            <li style="color: blue;font-size: 120%">Cover language</li>
             <li class="error">Aftercover inclusion</li>
         </ol>
         <h2><ins>Unordered</ins> parameters:</h2>
         <ul>
             <li>Language</li>
-            <li style="font-size: 120%;">Cover language</li>
-            <li>Aftercover <mark>inclusion</mark></li>
+            <li>Cover language</li>
+            <li>Aftercover inclusion</li>
         </ul>
+        <h2>A <em>description</em> list:</h2>
+        <dl>
+            <dt>Universidade Nova de Lisboa</dt>
+            <dd>- Faculdade de Ciências e Tecnologia</dd>
+            <dd>- Faculdade de Ciências Médicas</dd>
+            <dt>Universidade de Lisboa</dt>
+            <dd>- Instituto Superior Técnico</dd>
+            <dd>- Faculdade de Medicina</dd>
+        </dl>
+        <h2><sup>A</sup> nested <sub>list</sub> :</h2>
+        <ul>
+            <li>Tea</li>
+                <ol type="a" start="7">
+                    <li>Black tea</li>
+                    <li>Green tea</li>
+                </ol>
+            <li>Coffee</li>
+                <ul>
+                    <li>Colombian</li>
+                    <li>Brazilian</li>
+                </ul>
+        </ul>
+        <h2>A navigation menu:</h2>
+        <ul id="navigation_menu">   <!--could use class if it would exist more menus-->
+            <li><a href="#beginning">Home</a></li>
+            <li><a href="#chapter1">Chapter 1</a></li>
+            <li><a href="#chapter2">Chapter 2</a></li>
+            <li><a href="https://www.github.com/antoniomnds/testing" target="_blank">About</a></li>
+        </ul>
+        <br/>
+        <br/>
+        <button onclick="hideElements('table')">Hide tables</button>
+        <button onclick="showElements('table')">Show tables</button>
+        <table class="table">
+            <caption>Classic table (one cell per row and per column)</caption>
+            <!--<thead>, <tbody>, and <tfoot> elements will not affect the layout of the table by default. Use them to apply CSS-->
+            <thead>
+            <!--thead and tfoot can enable the table header and footer to be printed at the top and bottom of each page-->
+                <tr>
+                    <th>School</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!--The table data/cell can contain any HTML element, text, image, lists, other tables, etc-->
+                    <td>FCT-NOVA</td>
+                    <td>Caparica</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>NOVA-SBE</td>
+                    <td>Campolide</td>
+                </tr>
+            </tfoot>
+        </table>
+        <br/>
+        <br/>
+        <table class="table">  <!--Table with cells that spans many columns-->
+            <caption>Multi-column table</caption>
+            <tr>
+                <th colspan="2"><abbr title="Universidade Nova de Lisboa">UNL</abbr></th>
+                <th colspan="3"><abbr title="Universidade de Lisboa">UL</abbr></th>
+            </tr>
+            <tr>
+                <td><abbr title="Faculdade de Ciências e Tecnologia">FCT</abbr></td>
+                <td><abbr title="School of Business and Economics">SBE</abbr></td>
+                <td><abbr title="Instituto Superior Técnico">IST</abbr></td>
+                <td><abbr title="Faculdade de Ciências">FC</abbr></td>
+                <td><abbr title="Faculdade de Direito">FD</abbr></td>
+            </tr>
+        </table>
+        <br/>
+        <br/>
+        <table id="t1" class="table"> <!--Table with cells that spans many rows-->
+            <caption>Multi-row table</caption>
+            <tr>
+                <th rowspan="2"><abbr title="Universidade Nova de Lisboa">UNL</abbr></th>
+                <td><abbr title="Faculdade de Ciências e Tecnologia">FCT</abbr></td>
+            </tr>
+            <tr>
+                <td><abbr title="School of Business and Economics">SBE</abbr></td>
+            </tr>
+            <tr>
+                <th rowspan="3"><abbr title="Universidade de Lisboa">UL</abbr></th>
+                <td><abbr title="Instituto Superior Técnico">IST</abbr></td>
+            </tr>
+            <tr>
+                <td><abbr title="Faculdade de Ciências">FC</abbr></td>
+            </tr>
+            <tr>
+                <td><abbr title="Faculdade de Direito">FD</abbr></td>
+            </tr>
+        </table>
+        <br/>
         <hr>
         <br/>
         <q>Never give up on a dream just because of the time it will take to accomplish it. The time will pass anyway.</q>
-        
         <blockquote cite="www.google.com">Never give up on a dream just because of the time it will take to accomplish it. The time will pass anyway.</blockquote>
         <hr>
         <pre>
@@ -69,10 +169,41 @@
         </pre>
         <!--Inline styling bellow...-->
         <p style="background-color: green; color:white; font-size: 20px; text-align: center; border:black solid 4px;">A <em>green</em> box</p>
+        <p>Resize the window to see a picture changing.</p>
+        <picture> <!--Not supported in IE12 and earlier or Safari 9.0 and earlier-->
+            <!--The browser will use the first source element with matching values and ignore any following ones-->
+            <!--https://www.w3schools.com/tags/att_source_media.asp to more details on the attribute media-->
+            <source media="(min-width: 1200px)" srcset="images/scenic-landscape-1508373727uru.jpg">
+            <source media="(min-width: 850px)" srcset="images/winter-scene-1494682117gMU.jpg">
+                <!--An img element is required as the last child tag of the picture declaration block-->
+                <!--It's used to provide backward compability for browsers that don't support the picture element, or if none of the source tags matched-->
+            <img src="images/snowman-bitmap.jpg" alt="snowman" class="resize">
+        </picture>
         <br/>
-        <a href="#Beginning" style="font-size: 25px">Jump to the top!</a>  <!--Linked bookmark-->
-
         <br/>
-        <img id="img2" title="A public domain image :)" src="construction-zone-1351759675pK2.jpg" alt="Under construction" width="350" height="200">
+        <div style="background-color: black; color: white;">Some</div>
+        <div>text in divisions.</div>
+        <span style="background-color: black; color: white;">Some</span>
+        <span>text in spans.</span>
+        <h3>Other use of <span style="background-color:tomato; color: white">span</span>.</h3>
+        <br/>
+        <br/>
+        <a href="#beginning" style="font-size: 25px">Jump to the top!</a>  <!--Linked bookmark-->
+        <br/>
+        <img id="img2" title="A public domain image :)" src="images/construction-zone-1351759675pK2.jpg" alt="Under construction" width="350" height="200">
+        <br/>
+        <a href="https://www.github.com/antoniomnds/testing"><button>Website's repository</button></a>
+        <script>
+        function hideElements(element){
+            var x = document.getElementsByClassName(element);
+            for(var i = 0; i < x.length; i++)
+                x[i].style.display = "none";
+        }
+        function showElements(element){
+            var x = document.getElementsByClassName(element);
+            for(var i = 0; i < x.length; i++)
+                x[i].style.display = "table";
+        } 
+        </script>
     </body>
 </html>        
