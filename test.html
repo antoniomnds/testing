@@ -286,22 +286,9 @@
     <a href="https://www.github.com/antoniomnds/testing" target="_blank">
         <button>Website's repository</button>
     </a>
+    <!--when src is present, the script element must be empty-->
+    <script src="scripts.js"></script>
     <script>
-        function hideElements(element) {
-            var x = document.getElementsByClassName(element);
-            for (var i = 0; i < x.length; i++)
-                x[i].style.display = "none";
-        }
-        // try to do a generic method to all element types, or at least the more common ones
-        // like block-level, inline, table...
-        function showElements(element) {
-            var x = document.getElementsByClassName(element);
-            for (var i = 0; i < x.length; i++)
-                x[i].style.display = "table";
-        }
-        function changeText(elementID) {
-            var x = document.getElementById(elementID).innerHTML = "https://www.fct.unl.pt";
-        }
         function toogleLight(value) {
             var pic;
             if (value == 0)
@@ -311,6 +298,8 @@
             document.getElementById('myLightBulb').src = pic;
         }
     </script>
+    <!--Only shown when scripts are not supported by the browser-->
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
 </body>
 
 </html>
