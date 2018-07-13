@@ -11,7 +11,15 @@ function showElements(element) {
         x[i].style.display = "table";
 }
 function changeText(elementID) {
-    var x = document.getElementById(elementID).innerHTML = "https://www.fct.unl.pt";
+    document.getElementById(elementID).innerHTML = "https://www.fct.unl.pt";
 }
-// doesn't have to be all functions. Also executes script statements
+function toogleLight(value) {
+    var pic;
+    if (value == 0)
+        pic = "images/pic_bulbon.gif"
+    else
+        pic = "images/pic_bulboff.gif"
+    document.getElementById('myLightBulb').src = pic;
+}
+// doesn't have to be all functions. It alseo executes script statements:
 // e.g. document.getElementById("demo").innerHTML = "Hello World!";

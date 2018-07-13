@@ -3,9 +3,15 @@
 <html lang="en">
 
 <head>
-    <!--Document metadata-->
-    <meta charset="UTF-8" a <!--Document title-->
-    <title>HTML eXperience</title>
+    <!--Document metadata. Not displayed in the browser-->
+    <meta charset="UTF-8" name="">
+    <meta name="description" content="Webpage experience">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Antonio Santos">
+    <meta http-equiv="refresh" content=""> <!--Refresh document every "..." seconds-->
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <!--Document title-->
+    <title>HTML eXperience</title> 
     <!--Internal CSS uses the element style in the head section-->
     <style>
         h1 {
@@ -146,7 +152,6 @@
         </tfoot>
     </table>
     <br/>
-    <br/>
     <table class="table">
         <!--Table with cells that spans many columns-->
         <caption>Multi-column table</caption>
@@ -228,6 +233,7 @@
                 2829-516 Caparica</address>
 
             <bdo dir="rtl">Hello World!</bdo>
+            <cite>Some work title. See HTML reference for some possible attributes.</cite>
         </pre>
     <!--Inline styling bellow...-->
     <p style="background-color: green; color:white; font-size: 20px; text-align: center; border:black solid 4px;">A
@@ -276,6 +282,10 @@
         <button onclick="toogleLight(0)">Turn on.</button>
         <button onclick="toogleLight(1)">Turn off.</button>
     </div>
+    <div>
+        <p id="p1">Some paragraph.</p>
+        <button onclick="changeStyle('p1')">Click to change my style.</button>
+    </div>
     <br/>
     <a href="#beginning" style="font-size: 25px;">Jump to the top!</a>
     <!--Linked bookmark-->
@@ -289,13 +299,10 @@
     <!--when src is present, the script element must be empty-->
     <script src="scripts.js"></script>
     <script>
-        function toogleLight(value) {
-            var pic;
-            if (value == 0)
-                pic = "images/pic_bulbon.gif"
-            else
-                pic = "images/pic_bulboff.gif"
-            document.getElementById('myLightBulb').src = pic;
+        function changeStyle(elementID){
+            document.getElementById(elementID).style.fontSize = "20px";
+            document.getElementById(elementID).style.color = "white";
+            document.getElementById(elementID).style.backgroundColor = "black";
         }
     </script>
     <!--Only shown when scripts are not supported by the browser-->
